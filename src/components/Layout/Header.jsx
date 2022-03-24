@@ -1,4 +1,5 @@
 import MealsImg from "../../assets/meals.jpg";
+import HeaderButton from "./HeaderButton";
 
 const Header = () => {
   return (
@@ -8,7 +9,7 @@ const Header = () => {
       bg-yellow-900 py-0 px-[10%] z-10 shadow-normal "
       >
         <div>React Meals</div>
-        <button>Test</button>
+        <HeaderButton />
       </header>
       <div className="w-full z-0 overflow-hidden h-[22rem]">
         <img
