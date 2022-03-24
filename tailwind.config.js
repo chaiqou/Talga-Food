@@ -4,12 +4,6 @@ module.exports = {
   darkMode: false,
   theme: {
     extend: {
-      backgroundImage: {
-        "stars-backs": "url('./images/stars.png')",
-        "rocket-man": "url('./images/man.png')",
-        "split-white-black":
-          "linear-gradient(to left, #111827 50% , white 50%);",
-      },
       inset: {
         welcome: "434px",
       },
@@ -48,19 +42,10 @@ module.exports = {
         350: "350px",
         620: "620px",
       },
-      textColor: {
-        lightGray: "#F1EFEE",
-        redBerry: "#FE3B1F",
-        primary: "#FAFAFA",
-        secColor: "#efefef",
-        navColor: "#BEBEBE",
+      boxShadow: {
+        normal: "0 2px 8px rgba(0, 0, 0, 0.25)",
       },
-      backgroundColor: {
-        mainColor: "#FBF8F9",
-        secondaryColor: "#F0F0F0",
-        redBerry: "#FE3B1F",
-        blackOverlay: "rgba(0, 0 ,0 ,0.7)",
-      },
+
       keyframes: {
         "slide-in": {
           "0%": {
