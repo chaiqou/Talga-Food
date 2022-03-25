@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Card from "../UI/Card";
+import MealItem from "./MealItem";
 
 const DUMMY_MEALS = [
   {
@@ -30,11 +32,19 @@ const DUMMY_MEALS = [
 const AvailableMeals = () => {
   return (
     <section className="max-w-[60rem] w-[90%] my-8 mx-auto">
-      <ul>
-        {DUMMY_MEALS.map((meal) => (
-          <li className="list-none m-0 p-0">{meal.name}</li>
-        ))}
-      </ul>
+      <Card>
+        <ul>
+          {DUMMY_MEALS.map((meal) => (
+            <MealItem
+              key={meal.id}
+              price={meal.price}
+              description={meal.description}
+              name={meal.name}
+              className="list-none m-0 p-0"
+            />
+          ))}
+        </ul>
+      </Card>
     </section>
   );
 };
