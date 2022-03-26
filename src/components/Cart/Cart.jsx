@@ -1,4 +1,5 @@
 import React from "react";
+import Modal from "../UI/Modal";
 
 const reusableButtonStyle = `text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 
 text-center mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900`;
@@ -12,7 +13,7 @@ const Cart = () => {
     </ul>
   );
   return (
-    <div>
+    <Modal>
       {cartItems}
       <div className="flex justify-between items-center font-bold text-xl my-4 mx-0 ">
         <span>Total Amount</span>
@@ -22,7 +23,7 @@ const Cart = () => {
         <button className={`${reusableButtonStyle}`}>Close</button>
         <button className={`${reusableButtonStyle}`}>Order</button>
       </div>
-    </div>
+    </Modal>
   );
 };
 

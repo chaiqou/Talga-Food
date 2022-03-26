@@ -45,6 +45,9 @@ module.exports = {
       boxShadow: {
         normal: "0 2px 8px rgba(0, 0, 0, 0.25)",
       },
+      backgroundColor: {
+        blackOverlay: "rgba(0, 0 ,0 ,0.7)",
+      },
 
       keyframes: {
         "slide-in": {
