@@ -7,10 +7,12 @@ const BackDrop = () => {
   );
 };
 
+// top-[20vh] right-[30rem] w-[40em] fixed
+
 // tviton modal
 const ModalOverlay = ({ children }) => {
   return (
-    <div className="fixed top-[20vh] left-[5%] w-[80rem] bg-white p-4 rounded-xl shadow-normal z-30 ">
+    <div className=" top-[25rem] max-w-[45rem] w-[90%] m-auto mt-[-5rem] relative  bg-white p-4 rounded-xl shadow-normal z-30 ">
       <div>{children}</div>
     </div>
   );
