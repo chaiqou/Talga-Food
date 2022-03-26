@@ -1,9 +1,12 @@
 import ReactDOM from "react-dom";
 
 // shavi backdrop romelic faravs kvelafers
-const BackDrop = () => {
+const BackDrop = ({ hideCartHandler }) => {
   return (
-    <div className="fixed top-0 left-0 w-full z-20 h-[100vh] bg-blackOverlay" />
+    <div
+      onClick={hideCartHandler}
+      className="fixed top-0 left-0 w-full z-20 h-[100vh] bg-blackOverlay"
+    />
   );
 };
 
@@ -23,10 +26,13 @@ const portalElement = document.getElementById("overlays");
 
 // mtavari modal componenti
 
-const Modal = ({ children }) => {
+const Modal = ({ children, hideCartHandler }) => {
   return (
     <>
-      {ReactDOM.createPortal(<BackDrop />, portalElement)}
+      {ReactDOM.createPortal(
+        <BackDrop hideCartHandler={hideCartHandler} />,
+        portalElement
+      )}
       {ReactDOM.createPortal(
         <ModalOverlay>{children}</ModalOverlay>,
         portalElement
