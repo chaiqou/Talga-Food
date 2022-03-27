@@ -8,7 +8,7 @@ const Cart = ({ hideCartHandler }) => {
   const cartItems = (
     <ul className="list-none m-0 p-0 max-h-80 overflow-auto">
       {[{ id: "n1", name: "Khinkali", amount: 2, price: 2.5 }].map((item) => (
-        <li>{item.name}</li>
+        <li key={item.id}>{item.name}</li>
       ))}
     </ul>
   );

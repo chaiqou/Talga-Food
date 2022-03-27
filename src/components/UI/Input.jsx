@@ -1,7 +1,6 @@
 import React from "react";
 
 const Input = ({ input }) => {
-  console.log(input);
   return (
     <div className="flex items-center mb-2">
       <label className="mr-4 font-bold" htmlFor={input?.id}>
