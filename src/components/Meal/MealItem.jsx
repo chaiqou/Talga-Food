@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
+import CartContext from "../../context/CartContext";
 import MealItemForm from "./MealItemForm";
 
-const MealItem = ({ name, description, price }) => {
+const MealItem = ({ name, description, price, id }) => {
+  const cartCtx = useContext(CartContext);
+  const addToCartHandler = (amount) => {
+    cartCtx.addItem({
+      id: id,
+      name: name,
+      price: price,
+      amount: amount,
+    });
+  };
+
   return (
     <li className="flex justify-between m-4 pb-4 border-b-2">
       <div>
@@ -12,7 +23,7 @@ const MealItem = ({ name, description, price }) => {
         </div>
       </div>
       <div>
-        <MealItemForm />
+        <MealItemForm onAddToCart={addToCartHandler} />
       </div>
     </li>
   );
