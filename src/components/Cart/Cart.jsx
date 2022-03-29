@@ -11,15 +11,22 @@ const Cart = ({ hideCartHandler }) => {
   const totalItems = `$${cartCtx.totalItem.toFixed(2)}`;
   const hasItems = cartCtx.items.length > 0;
 
+  // wavshalot mapidan
+  const cartItemRemoveHandler = (id) => {};
+
+  const cartItemAddHandler = (item) => {};
+
   const cartItems = (
     <ul className="list-none m-0 p-0 max-h-80 overflow-auto">
       {cartCtx.items.map((item) => {
         return (
           <CartItem
-            price={item.price}
             name={item.name}
             amount={item.amount}
+            price={item.price}
             key={Math.random()}
+            onRemove={cartItemRemoveHandler.bind(null, item.id)}
+            onAdd={cartItemAddHandler.bind(null, item)}
           />
         );
       })}
@@ -28,7 +35,7 @@ const Cart = ({ hideCartHandler }) => {
   return (
     <Modal hideCartHandler={hideCartHandler}>
       {cartItems}
-      <div className="flex justify-between items-center font-bold text-xl my-4 mx-0 ">
+      <div className="flex justify-between max-h-80  items-center font-bold text-xl my-4 mx-0 ">
         <span>Total Amount</span>
         <span>{totalItems}</span>
       </div>
