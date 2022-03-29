@@ -7,6 +7,7 @@ const Input = React.forwardRef((props, ref) => {
         {props.input.label}
       </label>
       <input
+        ref={ref}
         className="w-12 rounded-[5px] pl-2 border-2 border-[#ccc]"
         {...props.input}
       />

@@ -7,6 +7,7 @@ const MealItemForm = ({ onAddToCart }) => {
 
   const onSubmitHandler = (event) => {
     event.preventDefault();
+
     const enteredAmount = amountInputRef.current.value;
     const enteredAmountNumber = +enteredAmount;
 
