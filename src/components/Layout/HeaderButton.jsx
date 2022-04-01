@@ -21,6 +21,14 @@ const HeaderButton = ({ showCartHandler }) => {
       return;
     }
     setBtnIsHighlited(true);
+    // 2 wamis mere shevacherot animacia
+    const time = setTimeout(() => {
+      setBtnIsHighlited(false);
+    }, 2000);
+
+    return () => {
+      clearTimeout(time);
+    };
   }, [items]);
 
   return (
